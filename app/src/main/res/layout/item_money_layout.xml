@@ -51,17 +51,20 @@
             android:layout_marginStart="8dp">
 
             <TextView
+                android:id="@+id/item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" USD"/>
 
             <TextView
+                android:id="@+id/item_buy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text=" 57498"/>
 
             <TextView
+                android:id="@+id/item_sale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
