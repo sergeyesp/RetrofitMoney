@@ -1,4 +1,22 @@
 package com.example.retrofitmoney.screens.start
 
-class StartViewModel {
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.retrofitmoney.data.repository.Repository
+import com.example.retrofitmoney.model.nal.Nalichka
+import kotlinx.coroutines.launch
+import retrofit2.Response
+
+class StartViewModel: ViewModel() {
+
+    var repo = Repository()
+    val myMoneyList: MutableLiveData<Response<Nalichka>> = MutableLiveData()
+
+    fun getNalMoney() {
+        viewModelScope.launch {
+            myMoneyList.value = repo.getNal()
+        }
+    }
+
 }
